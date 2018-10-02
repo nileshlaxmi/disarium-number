@@ -1,20 +1,24 @@
 const clickFunction = () => {
     var str = $("#ipText").val();
-    console.log(str);
+    var num = parseInt(str);
 
-    let ar = str.split("");
-    let sum = 0;
+    
 
-    for(let i=0; i<ar.length; i++){
-        let num = parseInt(ar[i]);
-        sum = sum + Math.pow(num, (i+1));
-    }
+    for(let i=1; i<num; i++){
 
-    if(sum === parseInt(str)){
-        $("#opText").text("Disarium Number");
-    }
-    else{
-        $("#opText").text("Not a Disarium Number");
+        let ar = i.toString().split("");
+        let sum = 0;
+
+        for(let j=0; j<ar.length; j++){
+            let number = parseInt(ar[j]);
+            sum = sum + Math.pow(number, (j+1));
+        }
+        
+        if(sum === i){
+            var para = document.createElement("p");
+            para.innerHTML = "Disarium Numbers "+ i;
+            document.getElementById('opText').appendChild(para);
+        }
     }
 }
 
