@@ -2,8 +2,6 @@ const clickFunction = () => {
     var str = $("#ipText").val();
     var num = parseInt(str);
 
-    
-
     for(let i=1; i<num; i++){
 
         let ar = i.toString().split("");
