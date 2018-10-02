@@ -8,3 +8,8 @@ Input: 135
 Output: true
 135 is a Disarium number because it equals to 1^1 + 3^2 + 5^3 (each digit powered to the position in the number).
 ```
+
+# Folders:
+
+* single-number : Verify whether a given number is disarium or not.
+* numbers-in-a-range : Find all the disarium numbers in a range.
